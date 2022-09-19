@@ -1,3 +1,19 @@
+## Installing this Laravel app locally.
+
+- Make sure PHP is installed (An easy way to do this is to download XAMPP)
+- Make sure PHP is added to your PATH environment variable on your computer
+- Install the Composer package manager
+- Install the Laravel package using Composer
+- Download this `weather_task` repository as a zip file or by using `git clone` in CLI
+- Open this repository in your code editor and rename the `.env.example` file to `.env`
+- Using the CLI in your code editor run `composer install`
+- Run `php artisan key:generate` in CLI to create a Laravel `APP_KEY` in `.env`
+- Add the API key (provided in the email) to the `WEATHER_API_KEY` variable in the `.env` file
+- Run `php artisan serve` in CLI to run the app in your browser
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
