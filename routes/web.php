@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');});
+Route::post('/', [WeatherController::class, 'getWeather']);
+
+Route::fallback(function () {return redirect('/');});
