@@ -24,7 +24,7 @@
           @csrf
 
           <label for="city" class="block text-left mx-3">Enter a City:</label>
-          <input type="text" id="city" value="" name="city" placeholder="Please enter a city" class="bg-blue-100 p-2 m-3 w-full border rounded text-black focus:outline-none">
+          <input type="text" id="city" value="{{ old('city') }}" name="city" placeholder="Please enter a city" class="bg-blue-100 p-2 m-3 w-full border rounded text-black focus:outline-none">
 
           <label for="country_code" class="block text-left mx-3 mt-5">Select a Country:</label>
           <select name="country_code" id="country_code" class="bg-blue-100 p-2 m-3 w-full border rounded text-black focus:outline-none">
@@ -44,6 +44,16 @@
 
           <button type="submit" class="rounded-full p-2 px-6 m-3 mt-7 mx-auto w-2/4 block border-2 bg-gradient-to-r from-rose-700 to-rose-900">Submit</button>
         </form>
+
+        @if($errors)
+          @foreach ($errors->all() as $error)
+            <p class="text-red-500 text-md italic text-center m-5"> {{ $error }}</p>
+          @endforeach
+        @endif
+
+        @isset($error_msg)
+          <p class="text-red-500 text-md italic text-center m-5"> {{ $error_msg }}</p>
+        @endisset
 
       </div>
 

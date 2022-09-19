@@ -16,15 +16,24 @@
 
     <body class="bg-slate-700">
 
-      <div class="container p-4 mx-auto mt-10 text-white">
+      <div class="container text-center p-4 mx-auto mt-10 text-white">
 
-        <h1 class="text-4xl text-center sm:mt-5 mt-1">Results for - </h1>
+        <h1 class="text-4xl sm:mt-5 mt-1">{{ $city }} - {{ $country }}</h1>
+
+        @isset($info)
+          <div class="sm:mt-10 mt-6">
+              @foreach ($info as $key => $value)
+                  <p class="text-lg">{{ $key }}: {{ $value }}</p>
+                  <br>
+              @endforeach
+          </div>
+        @endisset
 
         <form action="/" class="my-20 w-2/3 md:w-2/4 lg:w-1/3 xl:w-1/4 mx-auto" method="POST">
           @csrf
 
           <label for="city" class="block text-left mx-3">Enter a City:</label>
-          <input type="text" id="city" value="" name="city" placeholder="Please enter a city" class="bg-blue-100 p-2 m-3 w-full border rounded text-black focus:outline-none">
+          <input type="text" id="city" value="{{ old('city') }}" name="city" placeholder="Please enter a city" class="bg-blue-100 p-2 m-3 w-full border rounded text-black focus:outline-none">
 
           <label for="country_code" class="block text-left mx-3 mt-5">Select a Country:</label>
           <select name="country_code" id="country_code" class="bg-blue-100 p-2 m-3 w-full border rounded text-black focus:outline-none">
