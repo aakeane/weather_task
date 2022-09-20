@@ -50,8 +50,11 @@
           @endphp
 
           </select>
+          <div class="text-white">
+            <button type="submit" class="rounded-full p-2 px-6 m-3 mt-7 mb-10 md:mb-3 mx-auto w-2/4 border-2 bg-gradient-to-r from-rose-700 to-rose-900">Submit</button>
+            <a href="/" class="rounded-full p-2 px-6 m-3 mt-7 border-2 bg-gradient-to-r from-blue-700 to-violet-900 hover:bg-sky-500">Homepage</a>
+          </div>
 
-          <button type="submit" class="rounded-full p-2 px-6 m-3 mt-7 mx-auto w-2/4 block border-2 bg-gradient-to-r from-rose-700 to-rose-900">Submit</button>
         </form>
 
       </div>
